@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ineedcoffee.online | Your Daily Brew, Delivered</title>
+    <meta name="description" content="Premium coffee subscriptions and merchandise delivered to your door. Discover our artisan coffee blends and branded products.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>ineedcoffee<span class="accent">.online</span></h1>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#subscriptions">Subscriptions</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="#search" class="icon-btn"><i class="fas fa-search"></i></a>
+                    <a href="#account" class="icon-btn"><i class="fas fa-user"></i></a>
+                    <a href="#cart" class="cart-btn">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Your Daily Brew, Delivered</h2>
+                <p class="hero-subtitle">Artisan coffee and premium merchandise, straight to your door.</p>
+                <div class="hero-cta">
+                    <a href="#shop" class="btn btn-primary">Shop Now</a>
+                    <a href="#subscriptions" class="btn btn-secondary">View Subscriptions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products" id="shop">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <p>Discover our handpicked selection of premium coffee and merchandise</p>
+            </div>
+            <div class="products-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/product-espresso-blend.jpg" alt="Signature Espresso Blend">
+                        <div class="product-tag">Bestseller</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Signature Espresso Blend</h3>
+                        <p class="product-description">Rich, bold, and perfectly balanced with notes of chocolate and caramel.</p>
+                        <div class="product-price">$18.99</div>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/product-ceramic-mug.jpg" alt="Ceramic Pour-Over Mug">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ceramic Pour-Over Mug</h3>
+                        <p class="product-description">Handcrafted ceramic mug with built-in pour-over dripper.</p>
+                        <div class="product-price">$24.99</div>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/product-hoodie.jpg" alt="Coffee Lover Hoodie">
+                        <div class="product-tag">New</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Coffee Lover Hoodie</h3>
+                        <p class="product-description">Super soft cotton blend hoodie with embroidered coffee design.</p>
+                        <div class="product-price">$49.99</div>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/product-light-roast.jpg" alt="Morning Light Roast">
+                    </div>
+                    <div class="product-info">
+                        <h3>Morning Light Roast</h3>
+                        <p class="product-description">Bright and fruity with hints of citrus and honey.</p>
+                        <div class="product-price">$16.99</div>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="#all-products" class="btn btn-secondary">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscription Plans Section -->
+    <section class="subscription-plans" id="subscriptions">
+        <div class="container">
+            <div class="section-header">
+                <h2>Coffee Subscription Plans</h2>
+                <p>Never run out of your favorite coffee again with our flexible subscription options</p>
+            </div>
+            <div class="plans-grid">
+                <!-- Plan Card 1 -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Starter</h3>
+                        <div class="plan-price">
+                            <span class="price">$14.99</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 1 bag (12oz) monthly</li>
+                            <li><i class="fas fa-check"></i> Choose from 3 blends</li>
+                            <li><i class="fas fa-check"></i> Free shipping</li>
+                            <li><i class="fas fa-check"></i> Cancel anytime</li>
+                        </ul>
+                    </div>
+                    <div class="plan-cta">
+                        <a href="#subscribe" class="btn btn-primary">Subscribe Now</a>
+                    </div>
+                </div>
+                
+                <!-- Plan Card 2 -->
+                <div class="plan-card featured">
+                    <div class="plan-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3>Enthusiast</h3>
+                        <div class="plan-price">
+                            <span class="price">$24.99</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 2 bags (12oz) monthly</li>
+                            <li><i class="fas fa-check"></i> Access to all blends</li>
+                            <li><i class="fas fa-check"></i> Free shipping</li>
+                            <li><i class="fas fa-check"></i> 10% off merchandise</li>
+                            <li><i class="fas fa-check"></i> Cancel anytime</li>
+                        </ul>
+                    </div>
+                    <div class="plan-cta">
+                        <a href="#subscribe" class="btn btn-primary">Subscribe Now</a>
+                    </div>
+                </div>
+                
+                <!-- Plan Card 3 -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Connoisseur</h3>
+                        <div class="plan-price">
+                            <span class="price">$39.99</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 3 bags (12oz) monthly</li>
+                            <li><i class="fas fa-check"></i> Access to all blends + limited editions</li>
+                            <li><i class="fas fa-check"></i> Free priority shipping</li>
+                            <li><i class="fas fa-check"></i> 15% off merchandise</li>
+                            <li><i class="fas fa-check"></i> Free coffee accessory quarterly</li>
+                            <li><i class="fas fa-check"></i> Cancel anytime</li>
+                        </ul>
+                    </div>
+                    <div class="plan-cta">
+                        <a href="#subscribe" class="btn btn-primary">Subscribe Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Join thousands of happy coffee lovers who can't start their day without us</p>
+            </div>
+            <div class="testimonials-slider">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>The subscription service has completely changed my morning routine. The coffee is always fresh, and I love discovering new blends each month!</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/testimonial-1.jpg" alt="Sarah Johnson">
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Enthusiast Plan • 8 months</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>As a coffee connoisseur, I'm extremely picky about my beans. ineedcoffee.online consistently delivers exceptional quality that rivals any specialty coffee shop.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/testimonial-2.jpg" alt="Michael Chen">
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>Connoisseur Plan • 1 year</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>The ceramic pour-over mug is a game-changer! Perfect for my office, and the hoodie is so comfortable I practically live in it. Great coffee, great products!</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/testimonial-3.jpg" alt="Emily Rodriguez">
+                        <div class="author-info">
+                            <h4>Emily Rodriguez</h4>
+                            <p>Starter Plan • 6 months</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <button class="prev-btn" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+                <div class="testimonial-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="next-btn" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-inner">
+                <div class="newsletter-content">
+                    <h2>Join Our Coffee Club</h2>
+                    <p>Subscribe to our newsletter for exclusive deals, brewing tips, and early access to limited edition products.</p>
+                </div>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                    <div class="form-disclaimer">
+                        <label>
+                            <input type="checkbox" required>
+                            <span>I agree to receive emails from ineedcoffee.online. We promise not to spam!</span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <h2>ineedcoffee<span class="accent">.online</span></h2>
+                    </div>
+                    <p class="footer-tagline">Your daily brew, delivered with love.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Shop</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Coffee Beans</a></li>
+                        <li><a href="#">Brewing Equipment</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <address class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Brew Street, Coffee Town</p>
+                        <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> hello@ineedcoffee.online</p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 ineedcoffee.online. All rights reserved.</p>
+                </div>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
