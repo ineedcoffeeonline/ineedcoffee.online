@@ -564,4 +564,55 @@ document.getElementById('save-review-btn').addEventListener('click', function() 
   renderReviews(place);
   document.getElementById('review-text').value = '';
 });
+// Cafe Reviews Modal functionality
+const cafeReviews = JSON.parse(localStorage.getItem('cafeCardReviews') || '{}');
+
+// Modal elements
+const modal = document.getElementById('cafe-review-modal');
+const modalPlace = document.getElementById('modal-place-name');
+const modalPlaceReviews = document.getElementById('modal-place-reviews');
+const modalTxt = document.getElementById('modal-review-text');
+const reviewsDiv = document.getElementById('modal-reviews-list');
+
+function renderModalReviews(place) {
+  reviewsDiv.innerHTML = '';
+  modalPlaceReviews.textContent = place;
+  if (cafeReviews[place]) {
+    cafeReviews[place].forEach(r => {
+      let el = document.createElement('div');
+      el.textContent = r;
+      el.style.padding = "0.32rem 0";
+      reviewsDiv.appendChild(el);
+    });
+  }
+}
+
+document.querySelectorAll('.review-btn').forEach(btn => {
+  btn.onclick = function() {
+    const place = this.getAttribute('data-place');
+    modal.style.display = 'flex';
+    modalPlace.textContent = place + ' Cafe Reviews';
+    modalTxt.value = '';
+    renderModalReviews(place);
+    // Attach save handler (only once)
+    document.getElementById('save-modal-review').onclick = function() {
+      const txt = modalTxt.value.trim();
+      if (!txt) return;
+      cafeReviews[place] = cafeReviews[place] || [];
+      cafeReviews[place].push(txt);
+      localStorage.setItem('cafeCardReviews', JSON.stringify(cafeReviews));
+      modalTxt.value = '';
+      renderModalReviews(place);
+    }
+  };
+});
+
+document.getElementById('close-modal').onclick = function() {
+  modal.style.display = 'none';
+};
+// Optional: close modal when clicking outside modal-content
+modal.onclick = function(e) {
+  if (e.target === modal) modal.style.display = 'none';
+};
+
 
