@@ -156,66 +156,23 @@
   </select>
 </div>
 
-  <!-- Cafe Reviews Section -->
-<section class="cafe-reviews" id="reviews">
-  <div class="container">
-    <div class="section-header">
-      <h2>Cafe Reviews</h2>
-      <p>Discover top cafes and share your review for each!</p>
-    </div>
-    <div class="products-grid">
-
-<!-- City Selector for Café Reviews -->
-    
-<div class="city-selector-bar" style="text-align:center; margin-bottom: 1.7em;">
-  <label for="citySelect" style="font-family:'Raleway',sans-serif;font-weight:500;">Explore Reviews for:</label>
-  <select id="citySelect" style="padding:0.5em 1em;border-radius:7px;font-size:1rem;font-family:'Raleway',sans-serif;margin-left:0.5em;">
-    <option value="">Select City</option>
-    <option value="phoenix.html">Phoenix</option>
-    <option value="scottsdale.html">Scottsdale</option>
-    <option value="tempe.html">Tempe</option>
-    <option value="Chandler.html">Chandler</option>
-    <option value="New York.html">New York</option>
-    <option value="Chicago.html">Chicago</option>
-    <option value="Las Vegas.html">Las Vegas</option>
-    <option value="San Diago.html">San Diego</option>
-    <option value="Philadelphia.html">Philadelphia</option>
-    <option value="Sedona.html">Sedona</option>
-    <!-- Add more cities/pages -->
+<!-- Dynamic Coffee Review Image + City Dropdown -->
+<div class="cafe-review-hero" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 2em;">
+  <img id="cafeReviewHeroImage" src="https://images.pexels.com/photos/302902/pexels-photo-302902.jpeg" alt="Coffee Cup" style="border-radius:12px; width:270px; max-width:98vw; margin-bottom:1em; box-shadow:0 2px 10px rgba(113,81,52,0.13);">
+  <div class="city-selector-bar" style="margin-top:0.2em;">
+    <label for="citySelect" style="font-family:'Raleway',sans-serif;font-weight:500;">Explore Reviews for:</label>
+    <select id="citySelect" style="padding:0.55em 1.1em;border-radius:7px;font-size:1rem;font-family:'Raleway',sans-serif;margin-left:0.6em;">
+      <option value="">Select City</option>
+      <option value="phoenix.html">Phoenix</option>
+      <option value="scottsdale.html">Scottsdale</option>
+      <option value="tempe.html">Tempe</option>
+      <option value="mesa.html">Mesa</option>
+      <!-- Add more cities/pages as needed -->
+    </select>
+  </div>
+</div>
         
-      <!-- Card 1 -->
-      <div class="product-card cafe-card">
-        <div class="product-info">
-          <h3>Phoenix</h3>
-          <p class="cafe-description">Famous for vibrant downtown coffee spots and hipster hangouts.</p>
-          <button class="btn btn-primary review-btn" data-place="Phoenix">Add/View Reviews</button>
-        </div>
-      </div>
-      <!-- Card 2 -->
-      <div class="product-card cafe-card">
-        <div class="product-info">
-          <h3>Scottsdale</h3>
-          <p class="cafe-description">Home to stylish cafes and artisan roasters.</p>
-          <button class="btn btn-primary review-btn" data-place="Scottsdale">Add/View Reviews</button>
-        </div>
-      </div>
-      <!-- Card 3 -->
-      <div class="product-card cafe-card">
-        <div class="product-info">
-          <h3>Tempe</h3>
-          <p class="cafe-description">College-town vibes, great for study and specialty brews.</p>
-          <button class="btn btn-primary review-btn" data-place="Tempe">Add/View Reviews</button>
-        </div>
-      </div>
-      <!-- Card 4 -->
-      <div class="product-card cafe-card">
-        <div class="product-info">
-          <h3>Mesa</h3>
-          <p class="cafe-description">Cozy spots perfect for families and relaxers alike.</p>
-          <button class="btn btn-primary review-btn" data-place="Mesa">Add/View Reviews</button>
-        </div>
-      </div>
-    </div>
+
     <!-- Modal for reviews, hidden initially -->
     <div id="cafe-review-modal" style="display:none;">
       <div class="modal-content">
