@@ -23,7 +23,20 @@
     --coffee-bean: #6F4E37;
     
     /* Font Families */
-    --heading-font: 'Playfair Display', serif;
+    --heading-font: body {
+  font-family: 'Kalam', Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  ...
+}
+
+/* New font for headings and buttons */
+h1, h2, h3, h4, h5, h6,
+button, .btn, .special-btn {
+  font-family: 'Dancing Script', 'Kalam', Arial, sans-serif;
+  font-weight: 700;
+}
+
     --body-font: 'Raleway', sans-serif;
     
     /* Spacing */
@@ -46,11 +59,20 @@ html {
 }
 
 body {
-    font-family: var(--body-font);
-    font-weight: 400;
-    line-height: 1.6;
-    color: var(--espresso-brown);
-    background-color: var(--cream);
+body {
+  font-family: 'Kalam', Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  ...
+}
+
+/* New font for headings and buttons */
+h1, h2, h3, h4, h5, h6,
+button, .btn, .special-btn {
+  font-family: 'Dancing Script', 'Kalam', Arial, sans-serif;
+  font-weight: 700;
+}
+
 }
 
 img {
