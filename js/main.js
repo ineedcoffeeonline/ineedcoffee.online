@@ -530,3 +530,38 @@ function initCartFunctionality() {
     `;
     document.head.appendChild(style);
 })();
+// Simple review storage in localStorage for demo/testing
+const reviews = JSON.parse(localStorage.getItem('cafeReviews') || '{}');
+
+function renderReviews(place) {
+  const reviewsDiv = document.getElementById('reviews-list');
+  reviewsDiv.innerHTML = '';
+  if (place && reviews[place]) {
+    reviews[place].forEach((review, idx) => {
+      let el = document.createElement('div');
+      el.className = 'review-item';
+      el.textContent = review;
+      reviewsDiv.appendChild(el);
+    });
+  }
+}
+
+document.getElementById('place-select').addEventListener('change', function() {
+  renderReviews(this.value);
+  document.getElementById('review-text').value = '';
+});
+
+document.getElementById('save-review-btn').addEventListener('click', function() {
+  const place = document.getElementById('place-select').value;
+  const reviewText = document.getElementById('review-text').value.trim();
+  if (!place || !reviewText) {
+    alert('Please select a place and write a review.');
+    return;
+  }
+  reviews[place] = reviews[place] || [];
+  reviews[place].push(reviewText);
+  localStorage.setItem('cafeReviews', JSON.stringify(reviews));
+  renderReviews(place);
+  document.getElementById('review-text').value = '';
+});
+
