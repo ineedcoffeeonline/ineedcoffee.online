@@ -145,34 +145,63 @@
         
     </section>
 
-<!-- Cafe Reviews Section -->
+  <!-- Cafe Reviews Section -->
 <section class="cafe-reviews" id="reviews">
   <div class="container">
     <div class="section-header">
       <h2>Cafe Reviews</h2>
-      <p>Discover the best coffee spots! Select a place and add your own review below.</p>
+      <p>Discover top cafes and share your review for each!</p>
     </div>
-    <div class="cafe-review-controls" style="margin-bottom: 1.75rem;">
-      <label for="place-select" style="font-family:'Raleway', sans-serif;font-weight:500;">Choose a Place:</label>
-      <select id="place-select" class="cafe-dropdown" style="margin:0 0.75rem 0 0.5rem;padding:0.45rem 0.7rem;border-radius:6px;font-family:'Raleway',sans-serif;">
-        <option value="">Select Place</option>
-        <option value="Scottsdale">Scottsdale</option>
-        <option value="Phoenix">Phoenix</option>
-        <option value="Tempe">Tempe</option>
-        <option value="Mesa">Mesa</option>
-        <!-- Add more -->
-      </select>
+    <div class="products-grid">
+      <!-- Card 1 -->
+      <div class="product-card cafe-card">
+        <div class="product-info">
+          <h3>Phoenix</h3>
+          <p class="cafe-description">Famous for vibrant downtown coffee spots and hipster hangouts.</p>
+          <button class="btn btn-primary review-btn" data-place="Phoenix">Add/View Reviews</button>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="product-card cafe-card">
+        <div class="product-info">
+          <h3>Scottsdale</h3>
+          <p class="cafe-description">Home to stylish cafes and artisan roasters.</p>
+          <button class="btn btn-primary review-btn" data-place="Scottsdale">Add/View Reviews</button>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="product-card cafe-card">
+        <div class="product-info">
+          <h3>Tempe</h3>
+          <p class="cafe-description">College-town vibes, great for study and specialty brews.</p>
+          <button class="btn btn-primary review-btn" data-place="Tempe">Add/View Reviews</button>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="product-card cafe-card">
+        <div class="product-info">
+          <h3>Mesa</h3>
+          <p class="cafe-description">Cozy spots perfect for families and relaxers alike.</p>
+          <button class="btn btn-primary review-btn" data-place="Mesa">Add/View Reviews</button>
+        </div>
+      </div>
     </div>
-    <div class="review-editor" style="margin-bottom: 1.25rem;">
-      <textarea id="review-text" rows="4" placeholder="Write your cafe review here..." style="width:100%;max-width:680px;font-size:1.05rem;font-family:'Raleway', sans-serif;padding:0.75rem 1rem;border:1px solid #eee;border-radius:6px;box-sizing:border-box;margin-bottom:0.6rem;"></textarea>
-      <br>
-      <button id="save-review-btn" class="btn btn-primary">Add Review</button>
+    <!-- Modal for reviews, hidden initially -->
+    <div id="cafe-review-modal" style="display:none;">
+      <div class="modal-content">
+        <span id="close-modal" style="float:right;cursor:pointer;font-size:1.4rem;">&times;</span>
+        <h3 id="modal-place-name"></h3>
+        <textarea id="modal-review-text" rows="4" style="width:100%;" placeholder="Write your review here..."></textarea>
+        <button id="save-modal-review" class="btn btn-primary" style="margin-top:0.7rem;">Save Review</button>
+        <div style="margin-top:1.5rem;">
+          <h4 style="margin-bottom:0.3rem;">Reviews for <span id="modal-place-reviews"></span>:</h4>
+          <div id="modal-reviews-list"></div>
+        </div>
+      </div>
     </div>
-    <div id="reviews-list" style="max-width:700px;"></div>
   </div>
 </section>
-
-    
+  
     </section>
 
     <!-- Subscription Plans Section -->
