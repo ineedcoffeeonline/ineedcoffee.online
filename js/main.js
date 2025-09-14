@@ -614,5 +614,30 @@ document.getElementById('close-modal').onclick = function() {
 modal.onclick = function(e) {
   if (e.target === modal) modal.style.display = 'none';
 };
+const galleryImages = [
+  'https://images.pexels.com/photos/302902/pexels-photo-302902.jpeg',
+  'https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg',
+  'https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg',
+  'https://images.pexels.com/photos/374885/pexels-photo-374885.jpeg',
+  'https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg',
+  'https://images.pexels.com/photos/1235706/pexels-photo-1235706.jpeg',
+  'https://images.pexels.com/photos/585750/pexels-photo-585750.jpeg',
+  // add or swap image URLs here
+];
+
+function fillHeroGallery() {
+  const imgCount = Math.min(6, galleryImages.length);
+  const shuffled = galleryImages.slice().sort(() => 0.5 - Math.random());
+  const selected = shuffled.slice(0, imgCount);
+  const grid = document.getElementById('heroGalleryGrid');
+  grid.innerHTML = '';
+  selected.forEach(src => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = 'Coffee Photo';
+    grid.appendChild(img);
+  });
+}
+document.addEventListener('DOMContentLoaded', fillHeroGallery);
 
 
