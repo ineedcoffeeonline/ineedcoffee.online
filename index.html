@@ -145,6 +145,36 @@
         
     </section>
 
+<!-- Cafe Reviews Section -->
+<section class="cafe-reviews" id="reviews">
+  <div class="container">
+    <div class="section-header">
+      <h2>Cafe Reviews</h2>
+      <p>Discover the best coffee spots! Select a place and add your own review below.</p>
+    </div>
+    <div class="cafe-review-controls" style="margin-bottom: 1.75rem;">
+      <label for="place-select" style="font-family:'Raleway', sans-serif;font-weight:500;">Choose a Place:</label>
+      <select id="place-select" class="cafe-dropdown" style="margin:0 0.75rem 0 0.5rem;padding:0.45rem 0.7rem;border-radius:6px;font-family:'Raleway',sans-serif;">
+        <option value="">Select Place</option>
+        <option value="Scottsdale">Scottsdale</option>
+        <option value="Phoenix">Phoenix</option>
+        <option value="Tempe">Tempe</option>
+        <option value="Mesa">Mesa</option>
+        <!-- Add more -->
+      </select>
+    </div>
+    <div class="review-editor" style="margin-bottom: 1.25rem;">
+      <textarea id="review-text" rows="4" placeholder="Write your cafe review here..." style="width:100%;max-width:680px;font-size:1.05rem;font-family:'Raleway', sans-serif;padding:0.75rem 1rem;border:1px solid #eee;border-radius:6px;box-sizing:border-box;margin-bottom:0.6rem;"></textarea>
+      <br>
+      <button id="save-review-btn" class="btn btn-primary">Add Review</button>
+    </div>
+    <div id="reviews-list" style="max-width:700px;"></div>
+  </div>
+</section>
+
+    
+    </section>
+
     <!-- Subscription Plans Section -->
     <section class="subscription-plans" id="subscriptions">
         <div class="container">
