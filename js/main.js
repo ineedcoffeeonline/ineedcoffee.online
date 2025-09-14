@@ -639,5 +639,32 @@ function fillHeroGallery() {
   });
 }
 document.addEventListener('DOMContentLoaded', fillHeroGallery);
+// Dynamic coffee image pool for cafe review hero
+const cafeReviewImages = [
+  'https://images.pexels.com/photos/302902/pexels-photo-302902.jpeg',
+  'https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg',
+  'https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg',
+  'https://images.pexels.com/photos/374885/pexels-photo-374885.jpeg',
+  'https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg',
+  'https://images.pexels.com/photos/1235706/pexels-photo-1235706.jpeg',
+  'https://images.pexels.com/photos/585750/pexels-photo-585750.jpeg'
+];
+
+function setRandomCafeReviewImage() {
+  const img = document.getElementById('cafeReviewHeroImage');
+  if (img && cafeReviewImages.length > 0) {
+    const pick = cafeReviewImages[Math.floor(Math.random() * cafeReviewImages.length)];
+    img.src = pick;
+  }
+}
+document.addEventListener('DOMContentLoaded', setRandomCafeReviewImage);
+
+// Dropdown redirect
+const cafeDropdown = document.getElementById('citySelect');
+if(cafeDropdown) {
+  cafeDropdown.addEventListener('change',function() {
+    if(this.value) window.location.href = this.value;
+  });
+}
 
 
