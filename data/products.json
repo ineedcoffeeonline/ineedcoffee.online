@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Stanley Quencher H2.0",
+    "description": "The H2.0 FlowState tumbler keeps you refreshed with fewer refills",
+    "price": "$35.00",
+    "image": "https://m.media-amazon.com/images/I/61zGiNBnsLL._AC_SX679_.jpg",
+    "tag": "Bestseller",
+    "url": "https://amzn.to/4nlv4IL"
+  },
+  {
+    "name": "Mora Ceramic Large Latte Mug",
+    "description": "Microwavable, Porcelain Coffee Cups With Big Handle",
+    "price": "$32.99",
+    "image": "https://m.media-amazon.com/images/I/61vbV+u+89L._AC_SX679_.jpg",
+    "tag": "Bestseller",
+    "url": "https://amzn.to/3JWjjKf"
+  },
+  {
+    "name": "Four Sigmatic Focus Mushroom Coffee",
+    "description": "Organic Ground Coffee with Lion's Mane Mushroom and Chaga",
+    "price": "$16.75",
+    "image": "https://m.media-amazon.com/images/I/71ZH+NBob2L._SX679_.jpg",
+    "tag": "New",
+    "url": "https://amzn.to/42eJ9iU"
+  },
+  {
+    "name": "Stainless Steel Compact Espresso Maker",
+    "description": "Stainless Steel Coffee Machine for Home and Office",
+    "price": "$89.99",
+    "image": "https://m.media-amazon.com/images/I/617OFifQ8vL._AC_SX679_.jpg",
+    "tag": "Top Reviews",
+    "url": "https://amzn.to/4nAdyka"
+  },
+  {
+    "name": "KRUPS Precision Grinder",
+    "description": "Flat burr grinder for drip, espresso, and cold brew",
+    "price": "$45.50",
+    "image": "https://m.media-amazon.com/images/I/71pE-D4aXML._AC_SX679_.jpg",
+    "tag": "New",
+    "url": "https://amzn.to/3yNqY8A"
+  },
+  {
+    "name": "Lavazza Super Crema Whole Bean Coffee Blend",
+    "description": "Mild and creamy medium espresso roast",
+    "price": "$22.99",
+    "image": "https://m.media-amazon.com/images/I/71qgqJ+pYRL._AC_SX679_.jpg",
+    "tag": "Fan Favorite",
+    "url": "https://amzn.to/3V5sK3z"
+  }
+]

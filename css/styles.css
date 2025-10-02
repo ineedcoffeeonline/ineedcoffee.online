@@ -910,3 +910,10 @@ ul {
   .hero-gallery-grid { grid-template-columns: repeat(2, 1fr);}
   .hero-gallery-grid img {height: 80px;}
 }
+
+/* Override for Amazon buttons to ensure correct font */
+.product-card .btn-secondary {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}

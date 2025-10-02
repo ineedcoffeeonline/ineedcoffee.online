@@ -12,7 +12,51 @@ document.addEventListener('DOMContentLoaded', function() {
     initNewsletterForm();
     initBackToTop();
     initCartFunctionality();
+    loadProducts();
 });
+
+/**
+ * Dynamically Loads Products from JSON
+ */
+async function loadProducts() {
+    try {
+        const response = await fetch('data/products.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const products = await response.json();
+        const productsGrid = document.querySelector('.products-grid');
+
+        if (productsGrid) {
+            productsGrid.innerHTML = ''; // Clear placeholder
+            products.forEach(product => {
+                const productCardHTML = `
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="${product.image}" alt="${product.name}">
+                            ${product.tag ? `<div class="product-tag">${product.tag}</div>` : ''}
+                        </div>
+                        <div class="product-info">
+                            <h3>${product.name}</h3>
+                            <p class="product-description">${product.description}</p>
+                            <div class="product-price">${product.price}</div>
+                            <a href="${product.url}" target="_blank" class="btn btn-secondary" style="margin-top:10px;">
+                              Buy on Amazon
+                            </a>
+                        </div>
+                    </div>
+                `;
+                productsGrid.insertAdjacentHTML('beforeend', productCardHTML);
+            });
+        }
+    } catch (error) {
+        console.error('Could not load products:', error);
+        const productsGrid = document.querySelector('.products-grid');
+        if(productsGrid) {
+            productsGrid.innerHTML = '<p>Could not load products at this time. Please try again later.</p>';
+        }
+    }
+}
 
 /**
  * Mobile Menu Toggle
@@ -649,48 +693,4 @@ const cafeReviewImages = [
   'https://images.pexels.com/photos/1235706/pexels-photo-1235706.jpeg',
   'https://images.pexels.com/photos/585750/pexels-photo-585750.jpeg'
 ];
-
-function setRandomCafeReviewImage() {
-  const img = document.getElementById('cafeReviewHeroImage');
-  if (img && cafeReviewImages.length > 0) {
-    const pick = cafeReviewImages[Math.floor(Math.random() * cafeReviewImages.length)];
-    img.src = pick;
-  }
-}
-document.addEventListener('DOMContentLoaded', setRandomCafeReviewImage);
-
-// Dropdown redirect
-const cafeDropdown = document.getElementById('citySelect');
-if(cafeDropdown) {
-  cafeDropdown.addEventListener('change',function() {
-    if(this.value) window.location.href = this.value;
-  });
-}
-const cafeReviewImages = [
-  'https://images.pexels.com/photos/302902/pexels-photo-302902.jpeg',
-  'https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg',
-  'https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg',
-  'https://images.pexels.com/photos/374885/pexels-photo-374885.jpeg',
-  'https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg',
-  'https://images.pexels.com/photos/1235706/pexels-photo-1235706.jpeg',
-  'https://images.pexels.com/photos/585750/pexels-photo-585750.jpeg'
-];
-
-function setRandomCafeReviewImage() {
-  const img = document.getElementById('cafeReviewHeroImage');
-  if (img && cafeReviewImages.length > 0) {
-    const pick = cafeReviewImages[Math.floor(Math.random() * cafeReviewImages.length)];
-    img.src = pick + '?auto=compress&w=1200&q=80'; // ensure high quality and fast load
-  }
-}
-document.addEventListener('DOMContentLoaded', setRandomCafeReviewImage);
-
-// Dropdown redirect
-const cafeDropdown = document.getElementById('citySelect');
-if(cafeDropdown) {
-  cafeDropdown.addEventListener('change',function() {
-    if(this.value) window.location.href = this.value;
-  });
-}
-
 
